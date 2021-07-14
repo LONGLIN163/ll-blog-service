@@ -72,6 +72,7 @@ module.exports = appInfo => {
   exports.cors = {
     //origin: ['http://localhost:3000','http://localhost:3001'],
     //origin: '127.0.0.1:3001',
+    enable: true,
     credentials:true, // allow cookie or session cross domin
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH,OPTIONS'// ***becare full OPTIONS
   };
