@@ -36,18 +36,11 @@ module.exports = appInfo => {
     },*/
 
     // database configuration-remote
-    // client: {
-    //   host: 'blog-db.camhq7invtrq.us-east-2.rds.amazonaws.com',
-    //   port: '3306',
-    //   user: 'longlin',
-    //   password: '12345678',
-    //   database: 'react_blog',
-    // },
     client: {
-      host     : process.env.RDS_HOSTNAME,
-      user     : process.env.RDS_USERNAME,
-      password : process.env.RDS_PASSWORD,
-      port     : process.env.RDS_PORT,
+      host: 'blog-db.camhq7invtrq.us-east-2.rds.amazonaws.com',
+      port: '3306',
+      user: 'longlin',
+      password: '12345678',
       database: 'react_blog',
     },
 
@@ -57,15 +50,15 @@ module.exports = appInfo => {
     agent: false,
   };
 
-  /*
-  var port = process.env.PORT || 8081;
+  
+  var port = process.env.PORT || 8080;
   config.cluster = {
     listen: {
       path: '',
       port: port,
-      hostname: "0.0.0.0",
+      hostname: "127.0.0.1",
     }
-  };*/
+  };
 
   exports.security = {
     csrf: {
