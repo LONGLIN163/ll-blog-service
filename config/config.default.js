@@ -50,6 +50,14 @@ module.exports = appInfo => {
     agent: false,
   };
 
+  config.cluster = {
+    listen: {
+      path: '',
+      port: 8081,
+      hostname: '127.0.0.1:7001',
+    }
+  };
+
   exports.security = {
     csrf: {
       enable: false
@@ -57,6 +65,7 @@ module.exports = appInfo => {
     //domainWhiteList:['*']
     domainWhiteList:['http://localhost:3000','http://localhost:3001','http://ll-blog-admin.s3-website.eu-west-3.amazonaws.com']
   }
+
 
   exports.cors = {
     //origin: ['http://localhost:3000','http://localhost:3001'],
