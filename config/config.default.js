@@ -58,6 +58,13 @@ module.exports = appInfo => {
     domainWhiteList:['http://localhost:3000','http://localhost:3001','http://ll-blog-admin.s3-website.eu-west-3.amazonaws.com']
   }
 
+  exports.cluster = {
+    listen: {
+      port: 8000,
+      hostname: '0.0.0.0'
+    }
+  }
+
   exports.cors = {
     //origin: ['http://localhost:3000','http://localhost:3001'],
     //origin: '127.0.0.1:3001',
