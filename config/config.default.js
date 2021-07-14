@@ -51,11 +51,9 @@ module.exports = appInfo => {
   };
 
   
-  var port = process.env.PORT || 8080;
   config.cluster = {
     listen: {
-      path: '',
-      port: port,
+      port: 8081,
       hostname: "127.0.0.1",
     }
   };
@@ -64,26 +62,15 @@ module.exports = appInfo => {
     csrf: {
       enable: false
     },
-    //domainWhiteList:['*']
     domainWhiteList:['http://localhost:3000','http://localhost:3001','http://ll-blog-admin.s3-website.eu-west-3.amazonaws.com']
   }
 
 
   exports.cors = {
-    //origin: ['http://localhost:3000','http://localhost:3001'],
-    //origin: '127.0.0.1:3001',
     enable: true,
     credentials:true, // allow cookie or session cross domin
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH,OPTIONS'// ***becare full OPTIONS
   };
-  // exports.cors = {
-  //   enable: true,
-  //   allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH,OPTIONS'
-  // };
-  // exports.security = {
-  //   domainWhiteList: [ 'http://localhost:3000', 'http://localhost:3001']
-  // };
-
 
   return {
     ...config,
