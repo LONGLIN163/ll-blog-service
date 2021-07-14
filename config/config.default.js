@@ -53,7 +53,7 @@ module.exports = appInfo => {
   
   config.cluster = {
     listen: {
-      port: 8081,
+      port: 3000,
       hostname: "127.0.0.1",
     }
   };
@@ -68,6 +68,7 @@ module.exports = appInfo => {
 
   exports.cors = {
     enable: true,
+    origin: ctx => ctx.get('origin'),
     credentials:true, // allow cookie or session cross domin
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH,OPTIONS'// ***becare full OPTIONS
   };
