@@ -36,11 +36,18 @@ module.exports = appInfo => {
     },*/
 
     // database configuration-remote
+    // client: {
+    //   host: 'blog-db.camhq7invtrq.us-east-2.rds.amazonaws.com',
+    //   port: '3306',
+    //   user: 'longlin',
+    //   password: '12345678',
+    //   database: 'react_blog',
+    // },
     client: {
-      host: 'blog-db.camhq7invtrq.us-east-2.rds.amazonaws.com',
-      port: '3306',
-      user: 'longlin',
-      password: '12345678',
+      host     : process.env.RDS_HOSTNAME,
+      user     : process.env.RDS_USERNAME,
+      password : process.env.RDS_PASSWORD,
+      port     : process.env.RDS_PORT,
       database: 'react_blog',
     },
 
