@@ -42,6 +42,7 @@ module.exports = appInfo => {
       user: 'longlin',
       password: '12345678',
       database: 'react_blog',
+      connectTimeout: 100000
     },
 
     // load into app, default true
@@ -50,11 +51,12 @@ module.exports = appInfo => {
     agent: false,
   };
 
-  var port = process.env.PORT || 8081;
+  var port = process.env.PORT || 8080;
+
   config.cluster = {
     listen: {
       port: port,
-      hostname: "0.0.0.0",
+      //hostname: "0.0.0.0",
     }
   };
 
