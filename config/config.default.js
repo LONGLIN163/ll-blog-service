@@ -50,10 +50,10 @@ module.exports = appInfo => {
     agent: false,
   };
 
-  
+  var port = process.env.PORT || 8081;
   config.cluster = {
     listen: {
-      port: 7001,
+      port: port,
       hostname: "127.0.0.1",
     }
   };

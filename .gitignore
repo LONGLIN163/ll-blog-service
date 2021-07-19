@@ -12,3 +12,9 @@ run/
 *.un~
 typings/
 .nyc_output/
+.gitignore
+.elasticbeanstalk/
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
